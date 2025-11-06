@@ -1,0 +1,103 @@
+<html>
+
+<head><title> Шахматы </title></head>
+
+<style>
+body {background-color: #dbbfad;}
+h1   {color: SaddleBrown;}
+p    {color: sienna;}
+a    {color: SaddleBrown;}
+</style>
+
+<center><h1> Шахматы.Основные фигуры</h1>
+<img src="shahmati/shahmatna.jpg" width="1030" height="450">
+
+<table>
+<tr align="middle">
+<td bgcolor="#372011" width="250" height="120"><a href="https://ru.wikipedia.org/wiki/%D0%A8%D0%B0%D1%85%D0%BC%D0%B0%D1%82%D1%8B"><h1>О шахматах</h1></a></td>
+<td bgcolor="#d0b28b" width="250" height="120"><a href="https://nsportal.ru/detskiy-sad/raznoe/2022/12/14/istoriya-shahmat-dlya-detey"><h1>Из истории</h1></a></td>
+<td bgcolor="#372011" width="250" height="120"><a href="https://poncy.ru/chess/?ysclid=mh3gxh1nch457459989"><h1>Шахматы</h1></a></td>
+<td bgcolor="#d0b28b" width="250" height="120"><a href="https://ru.wikipedia.org/wiki/%D0%A8%D0%B0%D1%85%D0%BC%D0%B0%D1%82%D0%BD%D1%8B%D0%B9_%D1%8D%D1%82%D1%8E%D0%B4"><h1>Этюды</h1></a></td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td bgcolor="#ffffff"><a href="shahmati/Ladya.html"> <img src="shahmati/ladya.jpg" width="120" height="120"></td ></a>
+<td bgcolor="#000000" width="120" height="120"><a href="shahmati/loshadd.html"> <img src="shahmati/loshad.jpg" width="120" height="120"></a></td>
+<td bgcolor="#ffffff"><a href="shahmati/slon.html"> <img src="shahmati/ferz.jpg" width="120" height="120""></td ></a>
+<td bgcolor="#000000" width="120" height="120"><a href="shahmati/ferzz.html"> <img src="shahmati/karaleva.jpg" width="120" height="120"></a></td>
+<td bgcolor="#ffffff"> <a href="shahmati/korol.html"><img src="shahmati/karol.jpg" width="120" height="120""></a></td >
+<td bgcolor="#000000" width="120" height="120"> <a href="shahmati/slon.html"><img src="shahmati/ferz b.jpg" width="120" height="120""></a> </td>
+<td bgcolor="#ffffff"> <a href="shahmati/loshadd.html"><img src="shahmati/loshad w.jpg" width="120" height="120""> </a></td >
+<td bgcolor="#000000" width="120" height="120"><a href="shahmati/Ladya.html"><img src="shahmati/ladya b.jpg" width="120" height="120"></a> </td>
+</tr>
+<tr>
+<td bgcolor="#000000" width="120" height="120"><a href="shahmati/peshka.html"> <img src="shahmati/peshka b.jpg" width="120" height="120"></a> </td>
+<td bgcolor="#ffffff"> <a href="shahmati/peshka.html"><img src="shahmati/peshka w.jpg" width="120" height="120""></a> </td>
+<td bgcolor="#000000" width="120" height="120"><a href="shahmati/peshka.html"> <img src="shahmati/peshka b.jpg" width="120" height="120"></a> </td>
+<td bgcolor="#ffffff"> <a href="shahmati/peshka.html"><img src="shahmati/peshka w.jpg" width="120" height="120""> </a></td width="120" height="60">
+<td bgcolor="#000000" width="120" height="120"><a href="shahmati/peshka.html"> <img src="shahmati/peshka b.jpg" width="120" height="120"> </a></td>
+<td bgcolor="#ffffff"> <a href="shahmati/peshka.html"><img src="shahmati/peshka w.jpg" width="120" height="120""></a> </td>
+<td bgcolor="#000000" width="120" height="120"><a href="shahmati/peshka.html"> <img src="shahmati/peshka b.jpg" width="120" height="120"></a> </td>
+<td bgcolor="#ffffff"><a href="shahmati/peshka.html"> <img src="shahmati/peshka w.jpg" width="120" height="120""> </a></td>
+</tr>
+<tr>
+<td bgcolor="#ffffff">  </td>
+<td bgcolor="#000000" width="120" height="120">  </td>
+<td bgcolor="#ffffff">  </td>
+<td bgcolor="#000000" width="120" height="120">  </td>
+<td bgcolor="#ffffff">  </td>
+<td bgcolor="#000000" width="120" height="120">  </td>
+<td bgcolor="#ffffff">  </td>
+<td bgcolor="#000000" width="120" height="120">  </td>
+</tr>
+<table>
+<tr  >
+<td bgcolor="#d0b28b"><p>Контактная информация:</p></td>
+<td bgcolor="#372011"> <p>Сделала Якуцевич Мария </p></td>
+<td bgcolor="#d0b28b"> <p>Номер:8999-999-99-99</p> </td>
+</table>
+
+<p align="middle">Текущее время: <time id="currentTime"></time></p>
+<script>
+  var timeElement = document.getElementById('currentTime');
+  setInterval(function () {
+    var currentTime = new Date();
+    timeElement.textContent = currentTime.toLocaleTimeString();
+  }, 1000);
+</script>
+<p>До нового года осталось:</p>
+<p id="demo"></p>
+
+<script>
+
+var countDownDate = new Date("Jan 1, 2026 00:00:01").getTime();
+
+
+var x = setInterval(function() {
+
+ 
+  var now = new Date().getTime();
+
+ 
+  var distance = countDownDate - now;
+
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  
+  document.getElementById("demo").innerHTML = days + "д " + hours + "ч "
+  + minutes + "мин " + seconds + "сек ";
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+</center>
+</body>
+
+</html>
